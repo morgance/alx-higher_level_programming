@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """Class Square with size, method of area and getters & setters"""
 class Square:
+
+
     """class that defines a square by size"""
     def __init__(self, size=0):
         """constructor for the square object"""
