@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""class with size and method of ares"""
 class Square:
     """class that defines square by size"""
     def __init__(self, size=0):
