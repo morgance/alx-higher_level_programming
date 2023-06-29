@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Class square with size property """
-class Square:
 
+
+class Square:
 
     """class that defines a square by  size"""
     def __init__(self, size=0):
