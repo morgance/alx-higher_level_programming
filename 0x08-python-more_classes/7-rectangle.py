@@ -2,7 +2,6 @@
 """ class that defines a Rectangle"""
 
 
-
 class Rectangle:
     """ Class that defines a rectangle """
 
@@ -12,7 +11,6 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """initializes the instance """
-
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
