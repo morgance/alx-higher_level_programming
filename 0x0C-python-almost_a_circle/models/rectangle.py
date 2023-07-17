@@ -68,7 +68,7 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if value <= 0:
             raise TypeError("y must be > 0")
-        self.__y = value 
+        self.__y = value
 
     def area(self):
         """that returns the area value of the Rectangle instance."""
@@ -92,7 +92,7 @@ class Rectangle(Base):
 
         return str_rectangle + str_id + str_xy + str_wh
 
-     def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """ update method """
         if args is not None and len(args) is not 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
