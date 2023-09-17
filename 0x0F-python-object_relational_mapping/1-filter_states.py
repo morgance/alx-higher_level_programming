@@ -3,19 +3,19 @@
 Lists all states with a name starting with N
 """
 from sys import argv
-import MySQLdb
+import MyQLdb
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                         db=sys.argv[3], port=3306)
-
+    db = MySQLdb.connect(
+        host='localhost',
+        port=3306,
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT * \
-    FROM states \
-    WHERE CONVERT(`name` USING Latin1) \
-    COLLATE Latin1_General_CS \
-    LIKE 'N%';")
-    sttes = cur.fetchall()
-
-    for state in states:
-        print(stte)
+    cur.execute(
+        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC;")
+    for stats in cur.fetchall():
+        if stats[1][0] == 'N':
+            print(stats)
+    db.close()
