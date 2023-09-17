@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/python3
 """
 states with a name starting with N
 """
