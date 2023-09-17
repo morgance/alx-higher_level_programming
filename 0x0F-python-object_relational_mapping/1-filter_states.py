@@ -1,9 +1,9 @@
-#!/usr/bin/python3
+#!/usr/bin/node
 """
-Lists all states with a name starting with N
+states with a name starting with N
 """
 from sys import argv
-import MyQLdb
+import MySQLdb
 
 if __name__ == '__main__':
     db = MySQLdb.connect(
