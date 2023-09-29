@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-"""script that fetches https://intranet.hbtn.io/status """
+"""Fetch link provided from a host"""
 
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     import urllib.request
 
+    url = "https://alx-intranet.hbtn.io/status"
 
-    with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-        html = response.read()
-        print('Body response:')
-        print('\t- type: {}'.format(type(html)))
-        print('\t- content: {}'.format(html))
-        print('\t- utf8 content: {}'.format(html.decode("utf-8")))
+    with urllib.request.urlopen(url) as response:
+        content = response.read()
+
+        decoded_content = content.decode("utf-8")
+
+        print(f"Body response:")
+        print(f"\t- type: {type(content)}")
+        print(f"\t- content: {content}")
+        print(f"\t- utf8 content: {decoded_content}")
