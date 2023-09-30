@@ -24,4 +24,4 @@ if __name__ == "__main__":
         else:
             print("[{}] {}".format(json_o.get('id'), json_o.get('name')))
     except Exception:
-        print("Not valid JSON")
+        print("Not a valid JSON")
